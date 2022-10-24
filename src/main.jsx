@@ -9,6 +9,7 @@ import NuevoUsuario from './pages/NuevoUsuario'
 import Capacitaciones, { loader as capacitacionesLoader } from './pages/Capacitaciones'
 import NuevaCapacitacion, {action as nuevoClienteAction} from './pages/NuevaCapacitacion'
 import ErrorPage from './components/ErrorPage'
+import EditarCapacitacion, { loader as editarCapacitacionLoader, action as editarClienteAction} from './pages/EditarCapacitacion'
 
 
 const router = createBrowserRouter([
@@ -37,7 +38,15 @@ const router = createBrowserRouter([
       {
         path: '/capacitaciones/nuevo',
         element: <NuevaCapacitacion />,
-        action: nuevoClienteAction
+        action: nuevoClienteAction,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: '/capacitaciones/:contenidoId/editar',
+        element: <EditarCapacitacion />,
+        loader: editarCapacitacionLoader,
+        action: editarClienteAction,
+        errorElement: <ErrorPage />
       }
 
     ]

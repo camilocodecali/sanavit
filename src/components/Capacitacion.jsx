@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 
 function Capacitacion({contenido}) {
 
+    const navigate = useNavigate()
 
     const {titulo, descripcion, fecha, id, dia} = contenido
   return (
@@ -23,6 +25,7 @@ function Capacitacion({contenido}) {
                     <button 
                         type="button"
                         className="text-green-600 hover:text-green-700 uppercase font-bold text-xs"
+                        onClick={()=> navigate(`/capacitaciones/${id}/editar`)}
                     >
                         Editar
                     </button>

@@ -12,6 +12,7 @@ const FormularioCapacitacion = ({contenido}) => {
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Día que corresponda a la capacitación"
                     name="dia"
+                    defaultValue={contenido?.dia}
                 />
             </div>
             <div className="mb-4">
@@ -25,6 +26,7 @@ const FormularioCapacitacion = ({contenido}) => {
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Título de la capacitación"
                     name="titulo"
+                    defaultValue={contenido?.titulo}
                 />
             </div>
             <div className="mb-4">
@@ -39,6 +41,7 @@ const FormularioCapacitacion = ({contenido}) => {
                     className="mt-2 block w-full p-3 bg-gray-50 h-40 align-self"
                     placeholder="Descripción de la capacitación"
                     name="descripcion"
+                    defaultValue={contenido?.descripcion}
                 />
             </div>
             <div className="mb-4">
@@ -52,6 +55,7 @@ const FormularioCapacitacion = ({contenido}) => {
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Inserte la URL del video"
                     name="media"
+                    defaultValue={contenido?.media}
                 />
             </div>
         </>
