@@ -5,56 +5,30 @@ function FormularioLogin() {
     <div className="mb-4">
         <label
             className="text-gray-800"
-            htmlFor="dia"
-        >Día:</label>
+            htmlFor="usuario"
+        >Usuario:</label>
         <input 
-            id="dia"
+            id="usuario"
             type="text"
             className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="Día que corresponda a la capacitación"
-            name="dia"
+            placeholder="Ingrese su usuario"
+            name="usuario"
         />
     </div>
     <div className="mb-4">
         <label
             className="text-gray-800"
-            htmlFor="titulo"
-        >Título:</label>
+            htmlFor="contraseña"
+        >Contraseña:</label>
         <input 
-            id="titulo"
-            type="text"
+            id="contraseña"
+            type="´password"
             className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="Título de la capacitación"
-            name="titulo"
+            placeholder="Ingrese la contraseña"
+            name="contraseña"
         />
     </div>
-    <div className="mb-4">
-        <label
-            className="text-gray-800"
-            htmlFor="descripcion"
-        >Descripción:</label>
-        <textarea
-            as="textarea"
-            id="descripcion"
-            type="text"
-            className="mt-2 block w-full p-3 bg-gray-50 h-40 align-self"
-            placeholder="Descripción de la capacitación"
-            name="descripcion"
-        />
-    </div>
-    <div className="mb-4">
-        <label
-            className="text-gray-800"
-            htmlFor="media"
-        >URL del video:</label>
-        <input 
-            id="media"
-            type="text"
-            className="mt-2 block w-full p-3 bg-gray-50"
-            placeholder="Inserte la URL del video"
-            name="media"
-        />
-    </div>
+
 </>
   )
 }
