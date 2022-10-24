@@ -1,52 +1,19 @@
 import { useLoaderData } from "react-router-dom";
 import Capacitacion from "../components/Capacitacion";
+import { obtenerCapacitaciones } from "../data/capacitaciones"
 
 export function loader() {
-  const contenidos = [
-    {
-        id: 1,
-        titulo: 'Juan',
-        descripcion: "Praesent sapien massa, convallis a pellentesque nec",
-        fecha: "2022-10-07",
-        dia: "1"
-    },
-    {
-        id: 2,
-        titulo: 'Karen',
-        descripcion: "Praesent sapien massa, convallis a pellentesque nec",
-        fecha: "2022-10-07",
-        dia:"1"
-    },
-    {
-        id: 3,
-        titulo: 'Josue',
-        descripcion: "Praesent sapien massa, convallis a pellentesque nec",
-        fecha: "2022-10-07",
-        dia:"2"
-    },
-    {
-        id: 4,
-        titulo: 'Miguel',
-        descripcion: "Praesent sapien massa, convallis a pellentesque nec",
-        fecha: "2022-10-07",
-        dia:"2"
-    },
-    {
-        id: 5,
-        titulo: 'Pedro',
-        descripcion: "Praesent sapien massa, convallis a pellentesque nec",
-        fecha: "2022-10-07",
-        dia:"3"
-    },
-];
 
-
+  const contenidos = obtenerCapacitaciones();
   return contenidos;
+
 }
 
 function Capacitaciones() {
 
   const contenidos = useLoaderData()
+
+
 
   return (
       <>

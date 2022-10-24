@@ -1,39 +1,66 @@
 {
-    "contenidos" : [
-        {
-            "id": 1,
-            "titulo": "Juan",
-            "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
-            "fecha": "2022-10-07",
-            "dia": 1
-        },
-        {
-            "id": 2,
-            "titulo": "Karen",
-            "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
-            "fecha": "2022-10-07",
-            "dia":1
-        },
-        {
-            "id": 3,
-            "titulo": "Josue",
-            "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
-            "fecha": "2022-10-07",
-            "dia":2
-        },
-        {
-            "id": 4,
-            "titulo": "Miguel",
-            "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
-            "fecha": "2022-10-07",
-            "dia":2
-        },
-        {
-            "id": 5,
-            "titulo": "Pedro",
-            "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
-            "fecha": "2022-10-07",
-            "dia": 3
-        }
-    ]
+  "contenidos": [
+    {
+      "id": 1,
+      "titulo": "Juan",
+      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
+      "fecha": "2022-10-07",
+      "dia": 1
+    },
+    {
+      "id": 2,
+      "titulo": "Karen",
+      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
+      "fecha": "2022-10-07",
+      "dia": 1
+    },
+    {
+      "id": 3,
+      "titulo": "Josue",
+      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
+      "fecha": "2022-10-07",
+      "dia": 2
+    },
+    {
+      "id": 4,
+      "titulo": "Miguel",
+      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
+      "fecha": "2022-10-07",
+      "dia": 2
+    },
+    {
+      "id": 5,
+      "titulo": "Pedro",
+      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
+      "fecha": "2022-10-07",
+      "dia": 3
+    },
+    {
+      "dia": "2",
+      "titulo": "Cardio para perder grasa",
+      "descripcion": "Aprende cardio para perder grasa",
+      "media": "youtube.com",
+      "id": 6
+    }
+  ],
+  "usuario": [
+    {
+        "id": 1,
+        "rol": "admin",
+        "usuario": "root",
+        "contraseña":"123456"
+    },
+    {
+        "id": 2,
+        "rol": "ventas",
+        "usuario": "ventas",
+        "contraseña":"123456"
+    },
+    {
+        "id": 3,
+        "rol": "global",
+        "usuario": "global",
+        "contraseña":"123456"
+    }
+  ]
 }

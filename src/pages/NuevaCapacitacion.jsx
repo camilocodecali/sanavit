@@ -1,6 +1,7 @@
-import { useNavigate, Form, useActionData } from 'react-router-dom'
+import { useNavigate, Form, useActionData, redirect } from 'react-router-dom'
 import FormularioCapacitacion from '../components/FormularioCapacitacion'
 import Error from '../components/Error'
+import { agregarCapacitaciones } from '../data/capacitaciones'
 
 export async function action({request}){
   const formData = await request.formData()
@@ -21,6 +22,10 @@ export async function action({request}){
     return errores
   }
 
+  
+  await agregarCapacitaciones(datos);
+
+  return redirect('/capacitaciones')
 
 
 }

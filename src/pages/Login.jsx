@@ -7,7 +7,7 @@ function Login() {
 
   return (
       <>
-        <div className="bg-green-600 text-white m-auto w-full px-5 py-10 mt-5 md:min-h-screen m">
+        <div className="bg-gradient-to-b from-green-300 to-green-600 text-white m-auto w-full px-5 py-10 mt-5 md:min-h-screen m">
           <h1 className="font-black text-4xl text-white">Iniciar sesión</h1>
           <p className="mt-3">
               Llena todos los campos para iniciar sesión.
