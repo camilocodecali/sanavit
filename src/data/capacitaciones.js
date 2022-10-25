@@ -28,7 +28,7 @@ export async function agregarCapacitaciones(datos){
 }
 
 export async function actualizarContenido(id, datos){
-        try {
+    try {
         const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
             method: 'PUT',
             body: JSON.stringify(datos),
@@ -42,4 +42,16 @@ export async function actualizarContenido(id, datos){
         console.log(error);
     }
 
+}
+
+export async function elminarContenido(id){
+    try {
+        const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
+            method: 'DELETE',
+        })
+        await respuesta.json()
+        
+    } catch (error) {
+        console.log(error);
+    }
 }

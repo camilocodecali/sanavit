@@ -77,7 +77,7 @@ function EditarCapacitacion() {
         <input
           type="submit"
           className="mt-5 w-full bg-green-800 p-3 uppercase font-bold text-white text-lg"
-          value="Registrar Capacitación"
+          value="Actualizar Capacitación"
         />
       </Form>
     </div>
