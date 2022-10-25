@@ -22,7 +22,6 @@ function Capacitaciones() {
               <th className="p-2">Capacitacion</th>
               <th className="p-2">Descripción</th>
               <th className="p-2">Día</th>
-              <th className="p-2">Fecha de publicación</th>
               <th className="p-2">Acciones</th>
             </tr>
           </thead>

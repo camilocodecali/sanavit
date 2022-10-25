@@ -25,9 +25,6 @@ function Capacitacion({contenido}) {
                 <td className="p-6">
                     Día: {dia}
                 </td>
-                <td className="p-6">
-                    {fecha}
-                </td>
                 <td className="p-6 flex gap-5 justify-center">
                     <button 
                         type="button"
