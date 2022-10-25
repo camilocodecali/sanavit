@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import FormularioUsuario from "../components/FormularioUsuario";
 
 function NuevoUsuario() {
   const navigate = useNavigate();
@@ -20,6 +21,12 @@ function NuevoUsuario() {
         </button>
 
       </div>
+
+      <div className="bg-white shadow rounded-md md:w-4/4 mx-auto px-5 py-10 mt-5">
+        <FormularioUsuario />
+
+      </div>
+
     </>
   )
 }

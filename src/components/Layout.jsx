@@ -8,7 +8,7 @@ function Layout() {
         <div className="md:flex md:min-h-screen">
             <aside className="md:w-1/4 bg-green-600 px-5 py-10">
                 <img className="m-3 mx-auto" src={LogoSanavita} alt="Logo Sanavita" srcSet={LogoSanavita} width="70%"/>
-                  <nav className="m-10 text-center">
+                  <nav className="m-8 text-center">
                     <Link 
                         className={`${location.pathname === '/capacitaciones' ? 'text-green-300' : 'text-white'} text-xl block mt-5 hover:text-green-300`}
                         to="/capacitaciones">Capacitaciones</Link>
