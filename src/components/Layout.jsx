@@ -10,16 +10,16 @@ function Layout() {
                 <img className="m-3 mx-auto" src={LogoSanavita} alt="Logo Sanavita" srcSet={LogoSanavita} width="70%"/>
                   <nav className="m-10 text-center">
                     <Link 
-                        className={`${location.pathname === '/capacitaciones' ? 'text-green-300' : 'text-white'} text-2xl block mt-2 hover:text-green-300`}
+                        className={`${location.pathname === '/capacitaciones' ? 'text-green-300' : 'text-white'} text-xl block mt-5 hover:text-green-300`}
                         to="/capacitaciones">Capacitaciones</Link>
                     <Link 
-                        className={`${location.pathname === '/capacitaciones/nuevo' ? 'text-green-300' : 'text-white'} text-2xl block mt-2 hover:text-green-300`}
+                        className={`${location.pathname === '/capacitaciones/nuevo' ? 'text-green-300' : 'text-white'} text-xl block mt-5 hover:text-green-300`}
                         to="/capacitaciones/nuevo">Crear Capacitaciones</Link>
                     <Link 
-                        className={`${location.pathname === '/usuarios' ? 'text-green-300' : 'text-white'} text-2xl block mt-2 hover:text-green-300`}
+                        className={`${location.pathname === '/usuarios' ? 'text-green-300' : 'text-white'} text-xl block mt-5 hover:text-green-300`}
                         to="/usuarios">Usuarios</Link>
                     <Link 
-                        className={`${location.pathname === '/usuarios/nuevo' ? 'text-green-300' : 'text-white'} text-2xl block mt-2 hover:text-green-300`}
+                        className={`${location.pathname === '/usuarios/nuevo' ? 'text-green-300' : 'text-white'} text-xl block mt-5 hover:text-green-300`}
                         to="/usuarios/nuevo">Crear Usuario</Link>
                   </nav>
             </aside>

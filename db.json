@@ -2,7 +2,7 @@
   "contenidos": [
     {
       "dia": "1",
-      "titulo": "recetas saludables",
+      "titulo": "recetas saludables finales",
       "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
       "media": "youtube.com",
       "id": 1
@@ -22,28 +22,21 @@
       "dia": 2
     },
     {
-      "id": 4,
-      "titulo": "Miguel",
-      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
-      "media": "youtube.com",
-      "dia": 2
-    },
-    {
-      "id": 5,
-      "titulo": "Pedro",
-      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
-      "media": "youtube.com",
-      "dia": 3
-    },
-    {
       "dia": "2",
       "titulo": "Cardio para perder grasa",
       "descripcion": "Aprende cardio para perder grasa",
       "media": "youtube.com",
       "id": 6
+    },
+    {
+      "dia": "2",
+      "titulo": "Yoga para tu vida",
+      "descripcion": "Mejores tips para integrar el Yoga en tu diario vivir.",
+      "media": "youtube.com/yoga",
+      "id": 7
     }
   ],
-  "usuario": [
+  "usuarios": [
     {
       "id": 1,
       "rol": "admin",

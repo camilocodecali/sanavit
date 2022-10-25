@@ -4,7 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Layout from './components/Layout'
 import Login from './pages/Login'
-import Usuarios from './pages/Usuarios'
+import Usuarios, {loader as usuariosLoader} from './pages/Usuarios'
 import NuevoUsuario from './pages/NuevoUsuario'
 import Capacitaciones, { loader as capacitacionesLoader } from './pages/Capacitaciones'
 import NuevaCapacitacion, {action as nuevoClienteAction} from './pages/NuevaCapacitacion'
@@ -24,7 +24,8 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/usuarios',
-        element: <Usuarios />
+        element: <Usuarios />,
+        loader: usuariosLoader
       },
       {
         path: '/usuarios/nuevo',

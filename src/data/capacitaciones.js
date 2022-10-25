@@ -1,11 +1,11 @@
 export async function obtenerCapacitaciones(){
-    const respuesta = await fetch(import.meta.env.VITE_API_URL)
+    const respuesta = await fetch(import.meta.env.VITE_API_CONTENIDOS_URL)
     const resultado = await respuesta.json()
     return resultado;
 }
 
 export async function obtenerCapacitacion(id){
-    const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`)
+    const respuesta = await fetch(`${import.meta.env.VITE_API_CONTENIDOS_URL}/${id}`)
     const resultado = await respuesta.json()
     return resultado;
 }
@@ -13,7 +13,7 @@ export async function obtenerCapacitacion(id){
 export async function agregarCapacitaciones(datos){
 
     try {
-        const respuesta = await fetch(import.meta.env.VITE_API_URL, {
+        const respuesta = await fetch(import.meta.env.VITE_API_CONTENIDOS_URL, {
             method: 'POST',
             body: JSON.stringify(datos),
             headers: {
@@ -29,7 +29,7 @@ export async function agregarCapacitaciones(datos){
 
 export async function actualizarContenido(id, datos){
     try {
-        const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
+        const respuesta = await fetch(`${import.meta.env.VITE_API_CONTENIDOS_URL}/${id}`, {
             method: 'PUT',
             body: JSON.stringify(datos),
             headers: {
@@ -46,7 +46,7 @@ export async function actualizarContenido(id, datos){
 
 export async function elminarContenido(id){
     try {
-        const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
+        const respuesta = await fetch(`${import.meta.env.VITE_API_CONTENIDOS_URL}/${id}`, {
             method: 'DELETE',
         })
         await respuesta.json()

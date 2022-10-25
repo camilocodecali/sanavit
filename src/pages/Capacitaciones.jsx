@@ -16,10 +16,10 @@ function Capacitaciones() {
       <p className="mt-3">Capacitaciones disponibles</p>
 
       {contenidos.length ? (
-        <table className="w-full bg-white shadow mt-5 table-auto">
+        <table className="w-full bg-white shadow mt-5 table-auto rounded-xl">
           <thead className="bg-green-800 text-white">
             <tr>
-              <th className="p-2">Capacitacion</th>
+              <th className="p-2">Capacitación</th>
               <th className="p-2">Descripción</th>
               <th className="p-2">Día</th>
               <th className="p-2">Acciones</th>
