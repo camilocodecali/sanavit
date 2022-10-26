@@ -13,6 +13,8 @@ import EditarCapacitacion, { loader as editarCapacitacionLoader, action as edita
 import { action as eliminarClienteAction} from './components/Capacitacion'
 import EditarUsuario, {loader as editarUsuarioLoader, action as editarUsuarioAction} from './pages/EditarUsuario'
 import { action as eliminarUsuarioAction } from './components/Usuario'
+import Principal from './pages/Principal'
+import Dias, {loader as diasLoader} from './pages/Dias'
 
 const router = createBrowserRouter([
   {
@@ -68,6 +70,15 @@ const router = createBrowserRouter([
         path: '/capacitaciones/:contenidoId/eliminar',
         action: eliminarClienteAction
 
+      },
+      {
+        path: '/principal',
+        element: <Principal />
+      },
+      {
+        path: '/dias/:dia',
+        element: <Dias />,
+        loader: diasLoader
       }
 
     ]
