@@ -11,9 +11,9 @@ const FormularioUsuario =({user}) => {
                     id="nombre"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Día que corresponda a la capacitación"
+                    placeholder="Nombre Completo"
                     name="nombre"
-                    defaultValue={user?.dia}
+                    defaultValue={user?.nombre}
                 />
             </div>
             <div className="mb-4">
@@ -21,99 +21,86 @@ const FormularioUsuario =({user}) => {
                     className="text-gray-800"
                     htmlFor="rol"
                 >Tipo de usuario:</label>
-                <select 
-                    name="rol" 
-                    id="rol" 
-                    className="mt-2 block w-full p-3 bg-gray-50"
-                    defaultValue={user?.dia}
-                    >
-                    <option value="admin">Administrador</option>
-                    <option value="ventas" selected>Venta</option>
-                    <option value="global">Global</option>
-                </select>
-            </div>
-            <div className="mb-4">
-                <label
-                    className="text-gray-800"
-                    htmlFor="media"
-                >URL del video:</label>
                 <input 
-                    id="media"
+                    id="rol"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Inserte la URL del video"
-                    name="media"
-                    defaultValue={user?.media}
-                />
+                    placeholder="Escribe el rol del usuario (admin, ventas o global)"
+                    name="rol"
+                    defaultValue={user?.rol}
+                /> 
             </div>
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="dia"
+                    htmlFor="usuario"
                 >Identificación:</label>
                 <input 
-                    id="dia"
-                    type="number"
+                    id="usuario"
+                    type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Día que corresponda a la capacitación"
-                    name="dia"
-                    defaultValue={user?.dia}
+                    placeholder="Número de identificación"
+                    name="usuario"
+                    defaultValue={user?.usuario}
+   
                 />
             </div>
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="dia"
+                    htmlFor="email"
                 >Email:</label>
                 <input 
-                    id="dia"
+                    id="email"
                     type="email"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Día que corresponda a la capacitación"
-                    name="dia"
-                    defaultValue={user?.dia}
+                    placeholder="Correo electronico del usuario"
+                    name="email"
+                    defaultValue={user?.email}
+
                 />
             </div>
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="dia"
-                >Email:</label>
-                <input 
-                    id="dia"
-                    type="email"
-                    className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Día que corresponda a la capacitación"
-                    name="dia"
-                    defaultValue={user?.dia}
-                />
-            </div>
-            <div className="mb-4">
-                <label
-                    className="text-gray-800"
-                    htmlFor="dia"
+                    htmlFor="direccion"
                 >Dirección:</label>
                 <input 
-                    id="dia"
-                    type="email"
+                    id="direccion"
+                    type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Día que corresponda a la capacitación"
-                    name="dia"
-                    defaultValue={user?.dia}
+                    placeholder="Dirección del usuario"
+                    name="direccion"
+                    defaultValue={user?.direccion}
+
                 />
             </div>
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="dia"
+                    htmlFor="ciudad"
                 >Ciudad:</label>
                 <input 
-                    id="dia"
-                    type="email"
+                    id="ciudad"
+                    type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
-                    placeholder="Día que corresponda a la capacitación"
-                    name="dia"
-                    defaultValue={user?.dia}
+                    placeholder="Ciudad del usuario"
+                    name="ciudad" 
+                    defaultValue={user?.ciudad}
+
+                />
+            </div>
+            <div className="mb-4">
+                <label
+                    className="text-gray-800"
+                    htmlFor="password"
+                >Contraseña:</label>
+                <input 
+                    id="password"
+                    type="password"
+                    className="mt-2 block w-full p-3 bg-gray-50"
+                    placeholder="Contraseña"
+                    name="password"
                 />
             </div>
         </>

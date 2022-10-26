@@ -1,9 +1,9 @@
 import { useNavigate, Form, redirect } from 'react-router-dom'
-import { elminarContenido } from '../data/capacitaciones'
+import { eliminarContenido } from '../data/capacitaciones'
 
 export async function action({params}){
 
-    await elminarContenido(params.contenidoId)
+    await eliminarContenido(params.contenidoId)
     return redirect('/capacitaciones')
 }
 

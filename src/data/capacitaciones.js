@@ -44,7 +44,7 @@ export async function actualizarContenido(id, datos){
 
 }
 
-export async function elminarContenido(id){
+export async function eliminarContenido(id){
     try {
         const respuesta = await fetch(`${import.meta.env.VITE_API_CONTENIDOS_URL}/${id}`, {
             method: 'DELETE',

@@ -1,7 +1,15 @@
+import { useNavigate, Form, redirect } from "react-router-dom";
+import { eliminarUsuario } from "../data/usuarios"
+
+export async function action({params}){
+  await eliminarUsuario(params.userId)
+  return redirect('/usuarios')
+}
 
 function Usuario({user}) {
 
   const {id, rol, usuario} = user;
+  const navigate = useNavigate();
 
   return (
     <>
@@ -12,15 +20,27 @@ function Usuario({user}) {
               <button
                 type="button"
                 className="text-green-600 hover:text-green-700 uppercase font-bold text-xs"
+                onClick={()=> navigate(`/usuarios/${id}/editar`)}
               >
                 Editar
               </button>
-              <button
-                type="button"
-                className="text-red-600 hover:text-red-700 uppercase font-bold text-xs"
+              
+              <Form
+                method="post"
+                action={`/usuarios/${id}/eliminar`}
+                onSubmit={(e)=>{
+                  if(!confirm('¿Deseas eliminar el usuario?')){
+                      e.preventDefault()
+                  }
+                }}
               >
-                Eliminar
-              </button>
+                <button
+                  type="submit"
+                  className="text-red-600 hover:text-red-700 uppercase font-bold text-xs"
+                >
+                  Eliminar
+                </button>
+              </Form>
             </td>
           </tr>
     </>

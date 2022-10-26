@@ -39,20 +39,32 @@
   "usuarios": [
     {
       "id": 1,
+      "nombre": "Camilo Rodriguez",
       "rol": "admin",
       "usuario": "root",
+      "email": "ventas@gmail.com",
+      "direccion": "Calle 11 #11-11",
+      "ciudad": "Cali",
       "contraseña": "123456"
     },
     {
       "id": 2,
+      "nombre": "Camilo Rodriguez",
       "rol": "ventas",
       "usuario": "ventas",
+      "email": "ventas@gmail.com",
+      "direccion": "Calle 11 #11-11",
+      "ciudad": "Cali",
       "contraseña": "123456"
     },
     {
       "id": 3,
+      "nombre": "Camilo Rodriguez",
       "rol": "global",
       "usuario": "global",
+      "email": "ventas@gmail.com",
+      "direccion": "Calle 11 #11-11",
+      "ciudad": "Cali",
       "contraseña": "123456"
     }
   ]
