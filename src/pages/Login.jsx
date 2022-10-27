@@ -30,7 +30,7 @@ export async function action({ request }){
     if(usuarioFilter[0].rol === "global" || usuarioFilter[0].rol === "ventas"){
       return redirect(`/principal`)
     }else if(usuarioFilter[0].rol === "admin") {
-      return redirect(`/capacitaciones`)
+      return redirect(`/principal`)
     }
   } else {
     return redirect ('/')
