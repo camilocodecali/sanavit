@@ -47,7 +47,7 @@ function Login() {
   return (
       <>
         <div className="flex h-screen  text-white bg-login">
-          <div className="m-auto md:w-1/4">
+          <div className="m-auto md:w-1/4 px-5">
             <img className="m-3 mx-auto" src={LogoSanavita} alt="Logo Sanavita" srcSet={LogoSanavita} width="70%"/>
               {errores?.length &&
               errores.map((error, i) => <Error key={i}>{error}</Error>)}
