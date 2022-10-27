@@ -14,7 +14,7 @@ function Layout() {
                   <nav className="m-8 text-center">
                     <Link 
                         className={`${location.pathname === '/principal' ? 'text-green-300' : 'text-white'} 
-                            text-xl  mt-5 hover:text-green-300 ${rol==='admin' ? 'hidden' : 'block'}`}
+                            text-xl  mt-5 hover:text-green-300 block`}
                             to="/principal">
                             Principal</Link>
                     <Link 
