@@ -4,28 +4,28 @@ function FormularioLogin() {
     <>
     <div className="mb-4">
         <label
-            className="text-gray-800"
+            className="text-white"
             htmlFor="usuario"
         >Usuario:</label>
         <input 
             id="usuario"
             type="text"
-            className="mt-2 block w-full p-3 bg-gray-50"
+            className="mt-2 block w-full p-3 bg-transparent border-2 border-solid border-white rounded-xl placeholder-white"
             placeholder="Ingrese su usuario"
             name="usuario"
         />
     </div>
     <div className="mb-4">
         <label
-            className="text-gray-800"
-            htmlFor="contraseña"
+            className="text-white"
+            htmlFor="password"
         >Contraseña:</label>
         <input 
-            id="contraseña"
-            type="´password"
-            className="mt-2 block w-full p-3 bg-gray-50"
+            id="password"
+            type="password"
+            className="mt-2 block w-full p-3 bg-transparent border-2 border-solid border-white rounded-xl placeholder-white"
             placeholder="Ingrese la contraseña"
-            name="contraseña"
+            name="password"
         />
     </div>
 

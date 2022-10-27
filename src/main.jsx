@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Layout from './components/Layout'
-import Login from './pages/Login'
+import Login, {action as loginAction} from './pages/Login'
 import Usuarios, {loader as usuariosLoader} from './pages/Usuarios'
 import NuevoUsuario, {action as nuevoUsuarioAction} from './pages/NuevoUsuario'
 import Capacitaciones, { loader as capacitacionesLoader } from './pages/Capacitaciones'
@@ -20,7 +20,8 @@ const router = createBrowserRouter([
   {
     index: true,
     path: '/',
-    element: <Login />
+    element: <Login />,
+    action: loginAction
   },
   {
     element: <Layout />,

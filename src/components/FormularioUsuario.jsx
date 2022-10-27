@@ -103,6 +103,16 @@ const FormularioUsuario =({user}) => {
                     name="password"
                 />
             </div>
+            <div className="mb-4">
+                <input 
+                    id="porcentaje"
+                    type="text"
+                    className="mt-2  w-full p-3 bg-gray-50 hidden"
+                    placeholder="Porcentaje"
+                    name="porcentaje"
+                    defaultValue="0"
+                />
+            </div>
         </>
   )
 }
