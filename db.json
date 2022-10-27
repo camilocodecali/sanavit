@@ -2,22 +2,22 @@
   "contenidos": [
     {
       "dia": "1",
-      "titulo": "recetas saludables finales",
-      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
+      "titulo": "Recetas saludables finales",
+      "descripcion": "Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat.",
       "media": "youtube.com",
       "id": 1
     },
     {
       "id": 2,
-      "titulo": "Karen",
-      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
+      "titulo": "Como tener una vida saludable",
+      "descripcion": "Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat.",
       "media": "youtube.com",
       "dia": "1"
     },
     {
       "id": 3,
-      "titulo": "Josue",
-      "descripcion": "Praesent sapien massa, convallis a pellentesque nec",
+      "titulo": "Ejercicios para la vida",
+      "descripcion": "Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat.",
       "media": "youtube.com",
       "dia": "2"
     },

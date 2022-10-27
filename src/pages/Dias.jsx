@@ -12,7 +12,9 @@ export async function loader({params}){
 function Dias({}) {
     const navigate = useNavigate()
     const [dia, contenidos] = useLoaderData()
-    console.log(contenidos);
+
+    const contenidosFilter = contenidos.filter(contenido => contenido.dia ===(dia));
+
   return (
     <>
         <h1 className="font-black text-4xl text-green-900">Día # {dia}</h1>
@@ -28,7 +30,14 @@ function Dias({}) {
             </button>
         </div>
         <div className="bg-white shadow rounded-md md:w-4/4 mx-auto px-5 py-10 mt-5">
-
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 p-10">
+            {contenidosFilter.map((contenidoFilter)=>
+                <Contenido 
+                    key={contenidoFilter.id}
+                    contenidoFilter={contenidoFilter}
+                />
+            )}
+            </div>
         </div>
     </>
   )
