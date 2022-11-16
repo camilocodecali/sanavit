@@ -2,6 +2,7 @@ import { useNavigate, Form, useActionData, redirect } from "react-router-dom"
 import FormularioUsuario from "../components/FormularioUsuario";
 import Error from "../components/Error";
 import { agregarUsuarios } from '../data/usuarios'
+import Redes from "../components/Redes"
 
 export async function action({request}) {
   const formData = await request.formData()
@@ -30,6 +31,10 @@ function NuevoUsuario() {
 
   return (
     <>
+      <div className="flex justify-end">
+         <Redes />
+
+      </div>
       <h1 className="font-black text-4xl text-green-900">Nuevo Usuario</h1>
       <p className="mt-3">
         Llena todos los campos para registrar un usuario.

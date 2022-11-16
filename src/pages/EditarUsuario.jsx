@@ -3,6 +3,7 @@ import FormularioUsuario from "../components/FormularioUsuario"
 import { obtenerUsuario } from "../data/usuarios"
 import Error from "../components/Error";
 import { actualizarUsuario } from "../data/usuarios";
+import Redes from "../components/Redes"
 
 export async function loader({params}){
 
@@ -51,6 +52,10 @@ function EditarUsuario() {
 
   return (
     <>
+        <div className="flex justify-end">
+         <Redes />
+
+      </div>
         <h1 className="font-black text-4xl text-green-900">Editar Capacitación</h1>
         <p className="mt-3">
         Llena todos los campos para editar una capacitación.

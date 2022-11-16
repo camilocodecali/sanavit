@@ -2,6 +2,7 @@ import { Form, useNavigate, useLoaderData, useActionData, redirect } from 'react
 import { obtenerCapacitacion, actualizarContenido } from "../data/capacitaciones";
 import FormularioCapacitacion from "../components/FormularioCapacitacion";
 import Error from '../components/Error';
+import Redes from "../components/Redes"
 
 export async function loader({params}){
 
@@ -52,6 +53,10 @@ function EditarCapacitacion() {
 
   return (
     <>
+      <div className="flex justify-end">
+         <Redes />
+
+      </div>
     <h1 className="font-black text-4xl text-green-900">Editar Capacitación</h1>
     <p className="mt-3">
       Llena todos los campos para editar una capacitación.

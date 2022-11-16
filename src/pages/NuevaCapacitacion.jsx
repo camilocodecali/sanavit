@@ -2,6 +2,7 @@ import { useNavigate, Form, useActionData, redirect } from "react-router-dom";
 import FormularioCapacitacion from "../components/FormularioCapacitacion";
 import Error from "../components/Error";
 import { agregarCapacitaciones } from "../data/capacitaciones";
+import Redes from "../components/Redes"
 
 export async function action({ request }) {
   const formData = await request.formData();
@@ -30,6 +31,10 @@ function NuevaCapacitacion() {
   const navigate = useNavigate();
   return (
     <>
+      <div className="flex justify-end">
+         <Redes />
+
+      </div>
       <h1 className="font-black text-4xl text-green-900">Nueva Capacitación</h1>
       <p className="mt-3">
         Llena todos los campos para registrar una capacitación.

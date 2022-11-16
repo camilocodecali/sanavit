@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Usuario from "../components/Usuario"
 import { obtenerUsuarios } from "../data/usuarios"
+import Redes from "../components/Redes"
 
 export function loader(){
   const users = obtenerUsuarios();
@@ -12,6 +13,10 @@ function Usuarios() {
 
   return (
     <>
+      <div className="flex justify-end">
+         <Redes />
+
+      </div>
       <h1 className="font-black text-4xl text-green-900">Usuarios</h1>
       <p className="mt-3">Usuarios disponibles</p>
 

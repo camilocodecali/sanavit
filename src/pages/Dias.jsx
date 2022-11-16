@@ -1,6 +1,7 @@
 import { useNavigate, useLoaderData } from "react-router-dom"
 import { obtenerCapacitaciones } from "../data/capacitaciones";
 import Contenido from "../components/Contenido";
+import Redes from "../components/Redes"
 
 export async function loader({params}){
     const dia = params.dia;
@@ -17,6 +18,10 @@ function Dias({}) {
 
   return (
     <>
+    <div className="flex justify-end">
+         <Redes />
+
+      </div>
         <h1 className="font-black text-4xl text-green-900">Día # {dia}</h1>
         <p className="mt-3">
             Consulte la capacitación de su interes

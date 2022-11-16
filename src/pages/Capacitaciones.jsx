@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Capacitacion from "../components/Capacitacion";
 import { obtenerCapacitaciones } from "../data/capacitaciones";
+import Redes from "../components/Redes"
 
 export function loader() {
   const contenidos = obtenerCapacitaciones();
@@ -12,6 +13,10 @@ function Capacitaciones() {
 
   return (
     <>
+      <div className="flex justify-end">
+         <Redes />
+
+      </div>
       <h1 className="font-black text-4xl text-green-900">Capacitaciones</h1>
       <p className="mt-3">Capacitaciones disponibles</p>
 

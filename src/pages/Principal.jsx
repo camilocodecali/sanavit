@@ -1,5 +1,6 @@
 import CardDia from "../components/CardDia";
 import { Line} from 'rc-progress';
+import Redes from "../components/Redes";
 
 function Principal() {
     
@@ -10,10 +11,18 @@ function Principal() {
 
   return (
     <>
-        <h1 className="font-black text-4xl text-green-900">Sistema de capacitación</h1>
-        <p className="mt-3">
-            Selecciona el día que quieras consultar
-        </p>
+            <div className="flex justify-end">
+                <Redes />
+
+            </div>
+            <div className="">
+                <h1 className="font-black text-4xl text-green-900">Sistema de capacitación</h1>
+                <p className="mt-3">
+                    Selecciona el día que quieras consultar
+                </p>
+            </div>
+
+
 
         <div className="bg-white shadow rounded-md md:w-4/4 mx-auto px-5 py-10 mt-5">
             <div className="mx-10" >
