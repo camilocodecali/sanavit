@@ -27,6 +27,8 @@ function Capacitaciones() {
               <th className="p-2">Capacitación</th>
               <th className="p-2">Descripción</th>
               <th className="p-2">Día</th>
+              <th className="p-2">Semana</th>
+              <th className="p-2">Rango</th>
               <th className="p-2">Acciones</th>
             </tr>
           </thead>

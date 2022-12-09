@@ -5,42 +5,63 @@
       "titulo": "Recetas saludables",
       "descripcion": "Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat.",
       "media": "youtube.com",
-      "id": 1
+      "id": 1,
+      "semana": "1",
+      "rango": "junior"
     },
     {
       "id": 2,
       "titulo": "Como tener una vida saludable",
       "descripcion": "Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat.",
       "media": "youtube.com",
-      "dia": "1"
+      "dia": "2",
+      "semana": "1",
+      "rango": "junior"
     },
     {
       "id": 3,
       "titulo": "Ejercicios para la vida",
       "descripcion": "Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat.",
       "media": "youtube.com",
-      "dia": "2"
+      "dia": "3",
+      "semana": "1",
+      "rango": "junior"
     },
     {
-      "dia": "2",
+      "dia": "1",
       "titulo": "Cardio para perder grasa",
       "descripcion": "Aprende cardio para perder grasa",
       "media": "youtube.com",
-      "id": 6
+      "id": 6,
+      "semana": "2",
+      "rango": "junior"
     },
     {
       "dia": "2",
       "titulo": "Yoga para tu vida",
       "descripcion": "Mejores tips para integrar el Yoga en tu diario vivir.",
       "media": "youtube.com/yoga",
-      "id": 7
+      "id": 7,
+      "semana": "2",
+      "rango": "junior"
     },
     {
       "dia": "3",
       "titulo": "Cardio para perder grasa",
       "descripcion": "aprende a perder grasa, mas información",
       "media": "youtube.com",
-      "id": 8
+      "id": 8,
+      "semana": "2",
+      "rango": "junior"
+    },
+    {
+      "semana": "2",
+      "dia": "6",
+      "rango": "junior",
+      "titulo": "Prueba de nuevo",
+      "descripcion": "prueba",
+      "media": "youtube.com",
+      "id": 9
     }
   ],
   "usuarios": [

@@ -4,6 +4,20 @@ const FormularioCapacitacion = ({contenido}) => {
             <div className="mb-4">
                 <label
                     className="text-gray-800"
+                    htmlFor="semana"
+                >Semana:</label>
+                <input 
+                    id="semana"
+                    type="text"
+                    className="mt-2 block w-full p-3 bg-gray-50"
+                    placeholder="Semana que corresponda a la capacitación"
+                    name="semana"
+                    defaultValue={contenido?.semana}
+                />
+            </div>
+            <div className="mb-4">
+                <label
+                    className="text-gray-800"
                     htmlFor="dia"
                 >Día:</label>
                 <input 
@@ -13,6 +27,20 @@ const FormularioCapacitacion = ({contenido}) => {
                     placeholder="Día que corresponda a la capacitación"
                     name="dia"
                     defaultValue={contenido?.dia}
+                />
+            </div>
+            <div className="mb-4">
+                <label
+                    className="text-gray-800"
+                    htmlFor="rango"
+                >Rango:</label>
+                <input 
+                    id="rango"
+                    type="text"
+                    className="mt-2 block w-full p-3 bg-gray-50"
+                    placeholder="Rango que corresponda a la capacitación"
+                    name="rango"
+                    defaultValue={contenido?.rango}
                 />
             </div>
             <div className="mb-4">

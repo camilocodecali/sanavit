@@ -11,7 +11,7 @@ function Capacitacion({contenido}) {
 
     const navigate = useNavigate()
 
-    const {titulo, descripcion, fecha, id, dia} = contenido
+    const {titulo, descripcion, fecha, id, dia, rango, semana} = contenido
   return (
         <>
             <tr className="border-b">
@@ -24,6 +24,14 @@ function Capacitacion({contenido}) {
                 </td>
                 <td className="p-6">
                     Día: {dia}
+                </td>
+                <td className="p-6">
+                    <p className="text-1xl text-gray-800">{semana}</p>
+                    
+                </td>
+                <td className="p-6">
+                    <p className="text-1xl text-gray-800">{rango}</p>
+                    
                 </td>
                 <td className="p-6 flex gap-5 justify-center">
                     <button 
