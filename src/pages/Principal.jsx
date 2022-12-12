@@ -1,6 +1,9 @@
 import CardDia from "../components/CardDia";
 import { Line} from 'rc-progress';
 import Redes from "../components/Redes";
+import iconoJunior from '../img/junior.png'
+import iconoSenior from '../img/senior.png'
+import iconoExperto from '../img/experto.png'
 
 function Principal() {
     
@@ -11,14 +14,14 @@ function Principal() {
 
   return (
     <>
-            <div className="flex justify-end">
+            <div className="flex justify-end mb-10 md:mb-0">
                 <Redes />
 
             </div>
             <div className="">
-                <h1 className="font-black text-4xl text-green-900">Sistema de capacitación</h1>
+                <h1 className="font-black text-4xl text-green-900">Capacitaciones</h1>
                 <p className="mt-3">
-                    Selecciona el día que quieras consultar
+                    Selecciona el nivel que quieras realizar
                 </p>
             </div>
 
@@ -30,11 +33,22 @@ function Principal() {
                 <Line percent={porcentaje} strokeWidth={4} strokeColor="#00A142" />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 p-10">
-                {dias.map((dia, i)=>(
-                    <CardDia key={i} dia={dia} />
-                ))}
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mt-20">
+                <div className="bg-verde-segundario p-20 mx-auto shadow-xl rounded-xl cursor-pointer hover:opacity-90">
+                    <p className="text-white font-bold text-xl">Método Junior</p>
+                    <img className="mt-5 content-center" src={iconoJunior} alt="icono nivel junior sanavita" />
+                </div>
+                <div className="bg-azul-senior p-20 mx-auto shadow-xl rounded-xl cursor-pointer hover:opacity-90 ">
+                    <p className="text-white font-bold text-xl">Método Senior</p>
+                    <img className="mt-5" src={iconoSenior} alt="icono nivel junior sanavita" />
+                </div>
+                <div className="bg-verde-terciario p-20 mx-auto shadow-xl rounded-xl cursor-pointer hover:opacity-90">
+                    <p className="text-white font-bold text-xl">Método Experto</p>
+                    <img className="mt-5" src={iconoExperto} alt="icono nivel junior sanavita" />
+                </div>
+
             </div>
+
         </div>
 
     </>

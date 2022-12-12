@@ -53,7 +53,7 @@ function EditarCapacitacion() {
 
   return (
     <>
-      <div className="flex justify-end">
+      <div className="flex justify-end mb-10 md:mb-0">
          <Redes />
 
       </div>
