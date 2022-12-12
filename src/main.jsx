@@ -15,7 +15,8 @@ import EditarUsuario, {loader as editarUsuarioLoader, action as editarUsuarioAct
 import { action as eliminarUsuarioAction } from './components/Usuario'
 import Principal from './pages/Principal'
 import Dias, {loader as diasLoader} from './pages/Dias'
-import Semanas from './pages/Semanas'
+import Semanas, {loader as semanasLoader} from './pages/Semanas'
+import Niveles, {loader as nivelesLoader} from './pages/Niveles'
 
 const router = createBrowserRouter([
   {
@@ -78,13 +79,19 @@ const router = createBrowserRouter([
         element: <Principal />
       },
       {
-        path: '/dias/:dia',
+        path: '/dias/:dia/:semana/:nivel',
         element: <Dias />,
         loader: diasLoader
       },
       {
-        path: '/semanas',
-        element: <Semanas/>
+        path: '/semanas/:semana/:nivel',
+        element: <Semanas/>,
+        loader: semanasLoader
+      },
+      {
+        path: '/niveles/:nivel',
+        element: <Niveles/>,
+        loader: nivelesLoader
       }
 
     ]

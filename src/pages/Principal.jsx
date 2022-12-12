@@ -4,6 +4,7 @@ import Redes from "../components/Redes";
 import iconoJunior from '../img/junior.png'
 import iconoSenior from '../img/senior.png'
 import iconoExperto from '../img/experto.png'
+import { Link } from "react-router-dom";
 
 function Principal() {
     
@@ -34,18 +35,18 @@ function Principal() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mt-20">
-                <div className="bg-verde-segundario p-20 mx-auto shadow-xl rounded-xl cursor-pointer hover:opacity-90">
+                <Link className="mx-auto" to={`/niveles/junior`}><div className="bg-verde-segundario p-20 shadow-xl rounded-xl  cursor-pointer hover:opacity-90">
                     <p className="text-white font-bold text-xl">Método Junior</p>
                     <img className="mt-5 content-center" src={iconoJunior} alt="icono nivel junior sanavita" />
-                </div>
-                <div className="bg-azul-senior p-20 mx-auto shadow-xl rounded-xl cursor-pointer hover:opacity-90 ">
+                </div></Link>
+                <Link className="mx-auto" to={`/niveles/senior`}><div className="bg-azul-senior p-20 mx-auto shadow-xl rounded-xl cursor-pointer hover:opacity-90 ">
                     <p className="text-white font-bold text-xl">Método Senior</p>
                     <img className="mt-5" src={iconoSenior} alt="icono nivel junior sanavita" />
-                </div>
-                <div className="bg-verde-terciario p-20 mx-auto shadow-xl rounded-xl cursor-pointer hover:opacity-90">
+                </div></Link>
+                <Link className="mx-auto" to={`/niveles/experto`}><div className="bg-verde-terciario p-20 mx-auto shadow-xl rounded-xl cursor-pointer hover:opacity-90">
                     <p className="text-white font-bold text-xl">Método Experto</p>
                     <img className="mt-5" src={iconoExperto} alt="icono nivel junior sanavita" />
-                </div>
+                </div></Link>
 
             </div>
 

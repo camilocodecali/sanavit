@@ -5,17 +5,18 @@ import Redes from "../components/Redes"
 
 export async function loader({params}){
     const dia = params.dia;
+    const nivel = params.nivel;
     const contenidos = await obtenerCapacitaciones();
-    return [dia,contenidos];
+    return [dia,contenidos, nivel];
 }
 
 
 function Dias({}) {
     const navigate = useNavigate()
-    const [dia, contenidos] = useLoaderData()
+    const [dia, contenidos, nivel] = useLoaderData()
 
-    const contenidosFilter = contenidos.filter(contenido => contenido.dia ===(dia));
-
+    const contenidosFilter = contenidos.filter(contenido => contenido.dia ===(dia) && contenido.rango ===(nivel));
+    console.log(contenidosFilter);
   return (
     <>
     <div className="flex justify-end mb-10 md:mb-0">
