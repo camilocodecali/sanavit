@@ -11,7 +11,8 @@ function Capacitacion({contenido}) {
 
     const navigate = useNavigate()
 
-    const {titulo, descripcion, fecha, id, dia, rango, semana} = contenido
+    const {titulo, descripcion, fecha, dia, rango, semana} = contenido.attributes
+    const id = contenido.id
   return (
         <>
             <tr className="border-b">

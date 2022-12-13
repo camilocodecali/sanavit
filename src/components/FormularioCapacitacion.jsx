@@ -72,7 +72,7 @@ const FormularioCapacitacion = ({contenido}) => {
                     defaultValue={contenido?.descripcion}
                 />
             </div>
-            <div className="mb-4">
+            {/* <div className="mb-4">
                 <label
                     className="text-gray-800"
                     htmlFor="media"
@@ -82,6 +82,21 @@ const FormularioCapacitacion = ({contenido}) => {
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Inserte la URL del video"
+                    name="media"
+                    defaultValue={contenido?.media}
+                />
+            </div> */}
+
+            <div className="mb-4">
+                <label
+                    className="text-gray-800"
+                    htmlFor="media"
+                >Video:</label>
+                <input 
+                    id="media"
+                    type="file"
+                    className="mt-2 block w-full p-3 bg-gray-50"
+                    placeholder="Seleccione el video"
                     name="media"
                     defaultValue={contenido?.media}
                 />

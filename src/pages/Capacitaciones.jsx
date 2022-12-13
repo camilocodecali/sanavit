@@ -3,14 +3,13 @@ import Capacitacion from "../components/Capacitacion";
 import { obtenerCapacitaciones } from "../data/capacitaciones";
 import Redes from "../components/Redes"
 
-export function loader() {
-  const contenidos = obtenerCapacitaciones();
+export async function loader() {
+  const contenidos = await obtenerCapacitaciones();
   return contenidos;
 }
 
 function Capacitaciones() {
   const contenidos = useLoaderData();
-
   return (
     <>
       <div className="flex justify-end mb-10 md:mb-0">
@@ -33,7 +32,7 @@ function Capacitaciones() {
             </tr>
           </thead>
           <tbody>
-            {contenidos.map((contenido) => (
+            {contenidos.map((contenido,i) => (
               <Capacitacion contenido={contenido} key={contenido.id} />
             ))}
           </tbody>

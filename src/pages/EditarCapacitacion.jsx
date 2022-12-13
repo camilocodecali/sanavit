@@ -15,18 +15,20 @@ export async function loader({params}){
       })
     }
     
-    return contenido
+    return contenido.attributes
 }
 
 export async function action({request, params}){
 
   const formData = await request.formData();
 
-  const datos = Object.fromEntries(formData);
+  const data = Object.fromEntries(formData);
+
+  const dataFinal = {data}
 
   //Validación
   const errores = [];
-  if (Object.values(datos).includes("")) {
+  if (Object.values(data).includes("")) {
     errores.push("Todos los campos son obligatorios");
   }
 
@@ -36,7 +38,7 @@ export async function action({request, params}){
   }
 
   //actualizar cliente
-  await actualizarContenido(params.contenidoId, datos);
+  await actualizarContenido(params.contenidoId, dataFinal);
 
   return redirect("/capacitaciones");
 
@@ -75,7 +77,7 @@ function EditarCapacitacion() {
         {errores?.length &&
         errores.map((error, i) => <Error key={i}>{error}</Error>)}
 
-      <Form method="post">
+      <Form method="post" encType="multipart/form-data">
         <FormularioCapacitacion
           contenido = {contenido}
         />

@@ -7,11 +7,16 @@ import Redes from "../components/Redes"
 export async function action({ request }) {
   const formData = await request.formData();
 
-  const datos = Object.fromEntries(formData);
+  const data = Object.fromEntries(formData);
+
+  const dataFinal = {data}
+  console.log(dataFinal);
+
+  console.log(data);
 
   //Validación
   const errores = [];
-  if (Object.values(datos).includes("")) {
+  if (Object.values(data).includes("")) {
     errores.push("Todos los campos son obligatorios");
   }
 
@@ -20,7 +25,7 @@ export async function action({ request }) {
     return errores;
   }
 
-  await agregarCapacitaciones(datos);
+ await agregarCapacitaciones(dataFinal); 
 
   return redirect("/capacitaciones");
 }
@@ -53,7 +58,7 @@ function NuevaCapacitacion() {
         {errores?.length &&
           errores.map((error, i) => <Error key={i}>{error}</Error>)}
 
-        <Form method="post">
+        <Form method="post" encType="multipart/form-data">
           <FormularioCapacitacion />
           <input
             type="submit"

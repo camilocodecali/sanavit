@@ -7,11 +7,12 @@ import Redes from "../components/Redes"
 export async function action({request}) {
   const formData = await request.formData()
 
-  const datos = Object.fromEntries(formData);
+  const data = Object.fromEntries(formData);
+  
 
   //Validación
   const errores = [];
-  if ( Object.values(datos).includes("")){
+  if ( Object.values(data).includes("")){
     errores.push("Todos los campos son obligatorios")
   }
 
@@ -19,7 +20,7 @@ export async function action({request}) {
   if(Object.keys(errores).length){
     return errores;
   }
-  await agregarUsuarios(datos)
+  await agregarUsuarios({data})
 
   return redirect('/usuarios')
   

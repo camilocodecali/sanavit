@@ -15,7 +15,7 @@ function Dias({}) {
     const navigate = useNavigate()
     const [dia, contenidos, nivel] = useLoaderData()
 
-    const contenidosFilter = contenidos.filter(contenido => contenido.dia ===(dia) && contenido.rango ===(nivel));
+    const contenidosFilter = contenidos.filter(contenido => contenido.attributes.dia ===(dia) && contenido.attributes.rango ===(nivel));
     console.log(contenidosFilter);
   return (
     <>
@@ -40,7 +40,7 @@ function Dias({}) {
             {contenidosFilter.map((contenidoFilter)=>
                 <Contenido 
                     key={contenidoFilter.id}
-                    contenidoFilter={contenidoFilter}
+                    contenidoFilter={contenidoFilter.attributes}
                 />
             )}
             </div>

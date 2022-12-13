@@ -8,7 +8,8 @@ export async function action({params}){
 
 function Usuario({user}) {
 
-  const {id, rol, usuario} = user;
+  const {rol, usuario} = user.attributes;
+  const id = user.id
   const navigate = useNavigate();
 
   return (

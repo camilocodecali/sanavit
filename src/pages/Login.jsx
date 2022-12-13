@@ -19,17 +19,17 @@ export async function action({ request }){
   }
 
   const usuariosList = await obtenerUsuarios();
-  const usuarioFilter = usuariosList.filter(usuarioList => usuarioList.usuario === (datos.usuario) && usuarioList.password === (datos.password) )
+  const usuarioFilter = usuariosList.filter(usuarioList=> usuarioList.attributes.usuario === (datos.usuario) && usuarioList.attributes.password === (datos.password) )
 
-  if(usuarioFilter[0]){
-    localStorage.setItem('localNombre', usuarioFilter[0].nombre)
-    localStorage.setItem('localRol', usuarioFilter[0].rol)
-    localStorage.setItem('localPorcentaje', usuarioFilter[0].porcentaje)
-    console.log(localStorage);
+
+  if(usuarioFilter[0].attributes){
+    localStorage.setItem('localNombre', usuarioFilter[0].attributes.nombre)
+    localStorage.setItem('localRol', usuarioFilter[0].attributes.rol)
+    localStorage.setItem('localPorcentaje', usuarioFilter[0].attributes.porcentaje)
   
-    if(usuarioFilter[0].rol === "global" || usuarioFilter[0].rol === "ventas"){
+    if(usuarioFilter[0].attributes.rol === "global" || usuarioFilter[0].rol === "ventas"){
       return redirect(`/principal`)
-    }else if(usuarioFilter[0].rol === "admin") {
+    }else if(usuarioFilter[0].attributes.rol === "admin") {
       return redirect(`/principal`)
     }
   } else {

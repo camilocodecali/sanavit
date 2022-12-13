@@ -66,15 +66,17 @@
   ],
   "usuarios": [
     {
-      "id": 1,
-      "nombre": "Camilo Rodriguez",
-      "rol": "admin",
-      "usuario": "root",
-      "email": "ventas@gmail.com",
-      "direccion": "Calle 11 #11-11",
-      "ciudad": "Cali",
-      "porcentaje": "0",
-      "password": "123456"
+      "data": {
+        "nombre": "Camilo Rodriguez L",
+        "rol": "global",
+        "usuario": "1144225534",
+        "email": "ventas3@gmail.com",
+        "direccion": "Calle 11 #11-11",
+        "ciudad": "Jamundi",
+        "password": "123456",
+        "porcentaje": "0"
+      },
+      "id": 1
     },
     {
       "id": 2,
@@ -97,17 +99,6 @@
       "ciudad": "Cali",
       "porcentaje": "70",
       "password": "123456"
-    },
-    {
-      "nombre": "Raulito Fernandez Rodriguez",
-      "rol": "global",
-      "usuario": "1144225534",
-      "email": "camilo@gmail.com",
-      "direccion": "Hacienda el",
-      "ciudad": "Jamundi",
-      "password": "123456",
-      "porcentaje": "0",
-      "id": 4
     },
     {
       "nombre": "Juan Pablo",

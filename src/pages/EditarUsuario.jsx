@@ -17,18 +17,20 @@ export async function loader({params}){
         })
     }
 
-    return user
+    return user.attributes
 
 }
 
 export async function action({request, params}){
     const formData = await request.formData();
 
-    const datos = Object.fromEntries(formData);
+    const data = Object.fromEntries(formData);
+
+    const datosFinal = {data}
 
     //validacion
     const errores =[];
-    if(Object.values(datos).includes("")){
+    if(Object.values(data).includes("")){
         errores.push("Todos los campos son obligatorios")
     }
 
@@ -38,7 +40,7 @@ export async function action({request, params}){
     }
 
     //actualizar usuario
-    await actualizarUsuario(params.userId, datos);
+    await actualizarUsuario(params.userId, datosFinal);
 
     return redirect("/usuarios")
 

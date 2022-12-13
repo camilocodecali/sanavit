@@ -31,7 +31,7 @@ function Layout() {
                             to="/usuarios">Usuarios</Link>
                     <Link 
                         className={`${location.pathname === '/usuarios/nuevo' ? 'text-green-300' : 'text-white'}
-                            text-xl  mt-5 hover:text-green-300 ${rol==='global'  ? 'hidden' : 'block'}`}
+                            text-xl  mt-5 hover:text-green-300 ${rol==='global'  ? 'hidden' : 'block'} ${rol==='ventas'  ? 'hidden' : 'block'}`}
                             to="/usuarios/nuevo">Crear Usuario</Link>
                     <Link 
                         className= 'text-green-900 bg-white px-5 py-2 mt-10 rounded text-xl block mt-5 hover:text-green-300' 
