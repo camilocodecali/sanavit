@@ -11,7 +11,7 @@ function Capacitacion({contenido}) {
 
     const navigate = useNavigate()
 
-    const {titulo, descripcion, fecha, dia, rango, semana} = contenido.attributes
+    const {titulo, descripcion, fecha, dia, rango, semana, media} = contenido.attributes
     const id = contenido.id
   return (
         <>
@@ -37,14 +37,18 @@ function Capacitacion({contenido}) {
                 <td className="p-6">
                     <button 
                         type="button"
-                        className="bg-red-700 text-white hover:bg-red-400 uppercase font-bold text-xs p-5 rounded-md"
+                        className={`${media ? 'bg-red-700' : 'bg-yellow-700'  }  hover:bg-red-400 text-white uppercase font-bold text-xs p-5 rounded-md`}
                         onClick={()=> navigate(`/capacitaciones/video/${id}`)}
                     >
-                        Subir
+                    { media && media.length ? (
+                    <>Subir</>
+                    ):(<>Editar</>)}
+                        
                     </button> 
                     
                 </td>
                 <td className="p-6  gap-5 justify-center">
+   
                     <button 
                         type="button"
                         className="text-green-600 hover:text-green-700 uppercase font-bold text-xs"

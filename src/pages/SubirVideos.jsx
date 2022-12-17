@@ -44,7 +44,8 @@ export async function action({ request }) {
     }}
     console.log(dataFinal);
 
-    await actualizarContenido(idContenido,dataFinal)
+    await actualizarContenido(idContenido,dataFinal);
+    return redirect("/capacitaciones");
 
 }
 
