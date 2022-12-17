@@ -1,5 +1,3 @@
-import {  Form, useActionData } from "react-router-dom";
-
 
 const FormularioCapacitacion = ({contenido}) => {
     return (
@@ -89,27 +87,7 @@ const FormularioCapacitacion = ({contenido}) => {
                     defaultValue={contenido?.media}
                 />
             </div> */}
-            <Form method="post" encType="multipart/form-data">
-                <div className="mb-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 content-center gap-3">
-                    <label
-                        className="text-gray-800 col-span-0 sm:col-span-0 md:col-span-4"
-                        htmlFor="media"
-                    >Video:</label>
-                    <input 
-                        id="media"
-                        type="file"
-                        className="mt-2 block w-full p-3 bg-gray-50"
-                        placeholder="Seleccione el video"
-                        name="media"
-                        defaultValue={contenido?.media}
-                    />
-                    <input
-                        type="submit"
-                        className="mt-5 w-3/4 bg-orange-600 p-3 rounded-md uppercase font-bold text-white text-lg"
-                        value="Subir video"
-                    />
-                </div>
-            </Form>
+
         </>
     )
 }

@@ -34,7 +34,17 @@ function Capacitacion({contenido}) {
                     <p className="text-1xl text-gray-800">{rango}</p>
                     
                 </td>
-                <td className="p-6 flex gap-5 justify-center">
+                <td className="p-6">
+                    <button 
+                        type="button"
+                        className="bg-red-700 text-white hover:bg-red-400 uppercase font-bold text-xs p-5 rounded-md"
+                        onClick={()=> navigate(`/capacitaciones/video/${id}`)}
+                    >
+                        Subir
+                    </button> 
+                    
+                </td>
+                <td className="p-6  gap-5 justify-center">
                     <button 
                         type="button"
                         className="text-green-600 hover:text-green-700 uppercase font-bold text-xs"

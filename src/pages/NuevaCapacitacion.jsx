@@ -1,7 +1,7 @@
 import { useNavigate, Form, useActionData, redirect } from "react-router-dom";
 import FormularioCapacitacion from "../components/FormularioCapacitacion";
 import Error from "../components/Error";
-import { agregarCapacitaciones } from "../data/capacitaciones";
+import { agregarCapacitaciones, subirVideo } from "../data/capacitaciones";
 import Redes from "../components/Redes"
 
 export async function action({ request }) {
@@ -11,8 +11,6 @@ export async function action({ request }) {
 
   const dataFinal = {data}
   console.log(dataFinal);
-
-  console.log(data);
 
   //Validación
   const errores = [];
@@ -25,9 +23,9 @@ export async function action({ request }) {
     return errores;
   }
 
- await agregarCapacitaciones(dataFinal); 
+  await agregarCapacitaciones(dataFinal);
 
-  return redirect("/capacitaciones");
+  return redirect(`/capacitaciones`);
 }
 
 function NuevaCapacitacion() {

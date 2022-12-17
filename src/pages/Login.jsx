@@ -1,6 +1,6 @@
 import {  Form, useActionData, redirect} from 'react-router-dom'
 import FormularioLogin from '../components/FormularioLogin'
-import LogoSanavita from '../img/logo-blanco-sanavita.png'
+import LogoSanavita from '../img/logo.png'
 import Error from '../components/Error';
 import { obtenerUsuarios } from '../data/usuarios';
 

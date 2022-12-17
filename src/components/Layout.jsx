@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router-dom"
-import LogoSanavita from '../img/logo-blanco-sanavita.png'
+import LogoSanavita from '../img/logoblanco.png'
 
 function Layout() {
   const location = useLocation();
@@ -10,7 +10,7 @@ function Layout() {
         <div className="md:flex md:min-h-screen">
             <aside className="md:w-1/4 bg-green-600 px-5 py-10">
                 <img className="m-3 mx-auto" src={LogoSanavita} alt="Logo Sanavita" srcSet={LogoSanavita} width="70%"/>
-                <p className="text-center text-xs text-white">{nombre}</p>
+                <p className="text-center text-xs text-white text-xl uppercase">{nombre}</p>
                   <nav className="m-8 text-center">
                     <Link 
                         className={`${location.pathname === '/principal' ? 'text-green-300' : 'text-white'} 

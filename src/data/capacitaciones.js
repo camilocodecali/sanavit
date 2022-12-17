@@ -10,6 +10,19 @@ export async function obtenerCapacitacion(id){
     return resultado.data;
 }
 
+export async function subirVideo() {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+         await fetch('http://localhost:1337/api/upload/',{
+            method:'post',
+            body: new FormData(e.target)
+         })
+    })
+
+
+}
+
 export async function agregarCapacitaciones(datos){
     console.log(datos);
     try {
@@ -20,6 +33,7 @@ export async function agregarCapacitaciones(datos){
                 'Content-Type': 'application/json'
             }
         })
+        console.log(respuesta);
         await respuesta.json()
 
     } catch (error) {

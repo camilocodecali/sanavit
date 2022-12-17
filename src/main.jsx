@@ -17,6 +17,7 @@ import Principal from './pages/Principal'
 import Dias, {loader as diasLoader} from './pages/Dias'
 import Semanas, {loader as semanasLoader} from './pages/Semanas'
 import Niveles, {loader as nivelesLoader} from './pages/Niveles'
+import SubirVideos, {action as subirVideo, loader as capacitacionVideo} from './pages/SubirVideos'
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,12 @@ const router = createBrowserRouter([
         path: '/niveles/:nivel',
         element: <Niveles/>,
         loader: nivelesLoader
+      },
+      {
+        path: '/capacitaciones/video/:contenidoId',
+        element: <SubirVideos/>,
+        loader: capacitacionVideo,
+        action: subirVideo,
       }
 
     ]
