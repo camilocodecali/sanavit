@@ -37,12 +37,12 @@ function Capacitacion({contenido}) {
                 <td className="p-6">
                     <button 
                         type="button"
-                        className={`${media ? 'bg-red-700' : 'bg-yellow-700'  }  hover:bg-red-400 text-white uppercase font-bold text-xs p-5 rounded-md`}
+                        className={`${media ? 'bg-yellow-700' : 'bg-red-700'  }  hover:bg-red-400 text-white uppercase font-bold text-xs p-5 rounded-md`}
                         onClick={()=> navigate(`/capacitaciones/video/${id}`)}
                     >
                     { media && media.length ? (
-                    <>Subir</>
-                    ):(<>Editar</>)}
+                   <>Editar</>
+                    ):(  <>Subir</>)}
                         
                     </button> 
                     

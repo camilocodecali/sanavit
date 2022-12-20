@@ -1,4 +1,3 @@
-import React from 'react'
 import LogoWhatsapp from '../img/whatsapp.png'
 import LogoTelegram from '../img/telegram.png'
 

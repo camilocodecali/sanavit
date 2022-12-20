@@ -19,6 +19,7 @@ import Semanas, {loader as semanasLoader} from './pages/Semanas'
 import Niveles, {loader as nivelesLoader} from './pages/Niveles'
 import SubirVideos, {action as subirVideo, loader as capacitacionVideo} from './pages/SubirVideos'
 
+
 const router = createBrowserRouter([
   {
     index: true,

@@ -1,4 +1,4 @@
-import {  Form, useActionData, useLoaderData } from "react-router-dom";
+import {  Form, useActionData, useLoaderData, redirect } from "react-router-dom";
 import { actualizarContenido } from "../data/capacitaciones";
 import { obtenerCapacitacion } from "../data/capacitaciones";
 
@@ -10,6 +10,8 @@ export async function loader({params}){
     await localStorage.setItem('tituloContenido', contenido.attributes.titulo)
     await localStorage.setItem('descripcionContenido', contenido.attributes.descripcion)
     await localStorage.setItem('idContenido', params.contenidoId)
+
+    return contenido
     
 }
 
