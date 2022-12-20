@@ -1,5 +1,5 @@
 import { useNavigate, useLoaderData } from "react-router-dom"
-import { obtenerCapacitaciones } from "../data/capacitaciones";
+import { obtenerCapacitaciones, obtenerVideos } from "../data/capacitaciones";
 import Contenido from "../components/Contenido";
 import Redes from "../components/Redes"
 
@@ -7,16 +7,19 @@ export async function loader({params}){
     const dia = params.dia;
     const nivel = params.nivel;
     const contenidos = await obtenerCapacitaciones();
-    return [dia,contenidos, nivel];
+
+    const contenidosFilter = contenidos.filter(contenido => contenido.attributes.dia ===(dia) && contenido.attributes.rango ===(nivel));
+
+    const videos = await obtenerVideos()
+
+    return [dia, contenidosFilter, videos];
 }
 
 
 function Dias({}) {
     const navigate = useNavigate()
-    const [dia, contenidos, nivel] = useLoaderData()
+    const [dia, contenidosFilter, videos] = useLoaderData()
 
-    const contenidosFilter = contenidos.filter(contenido => contenido.attributes.dia ===(dia) && contenido.attributes.rango ===(nivel));
-    console.log(contenidosFilter);
   return (
     <>
     <div className="flex justify-end mb-10 md:mb-0">
@@ -41,6 +44,7 @@ function Dias({}) {
                 <Contenido 
                     key={contenidoFilter.id}
                     contenidoFilter={contenidoFilter.attributes}
+                    videos={videos}
                 />
             )}
             </div>

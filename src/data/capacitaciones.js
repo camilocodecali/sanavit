@@ -10,6 +10,13 @@ export async function obtenerCapacitacion(id){
     return resultado.data;
 }
 
+export async function obtenerVideos(){
+    const respuesta = await fetch("http://localhost:1337/api/upload/files")
+    const resultado = await respuesta.json()
+    return resultado;
+    
+}
+
 export async function subirVideo() {
     const form = document.querySelector('form');
     form.addEventListener('submit', async (e)=>{
