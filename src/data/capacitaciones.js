@@ -11,7 +11,7 @@ export async function obtenerCapacitacion(id){
 }
 
 export async function obtenerVideos(){
-    const respuesta = await fetch("http://localhost:1337/api/upload/files")
+    const respuesta = await fetch(`${import.meta.env.VITE_API_STRAPI_UPLOAD_URL}/files`)
     const resultado = await respuesta.json()
     return resultado;
     
@@ -21,7 +21,7 @@ export async function subirVideo() {
     const form = document.querySelector('form');
     form.addEventListener('submit', async (e)=>{
         e.preventDefault();
-         await fetch('http://localhost:1337/api/upload/',{
+         await fetch(`${import.meta.env.VITE_API_STRAPI_UPLOAD_URL}/`,{
             method:'post',
             body: new FormData(e.target)
          })

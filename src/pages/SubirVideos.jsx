@@ -31,7 +31,7 @@ export async function action({ request }) {
 
     const videoName = data.files.name
 
-    await fetch('http://localhost:1337/api/upload/', {
+    await fetch('http://sanavita.vip/api/api/upload/', {
       method: 'post',
       body: formData
     });

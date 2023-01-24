@@ -10,7 +10,10 @@ export async function loader({params}){
 
     const contenidosFilter = contenidos.filter(contenido => contenido.attributes.dia ===(dia) && contenido.attributes.rango ===(nivel));
 
+    console.log(contenidosFilter);
+    
     const videos = await obtenerVideos()
+
 
     return [dia, contenidosFilter, videos];
 }
@@ -22,6 +25,7 @@ function Dias({}) {
 
   return (
     <>
+    
     <div className="flex justify-end mb-10 md:mb-0">
          <Redes />
 
